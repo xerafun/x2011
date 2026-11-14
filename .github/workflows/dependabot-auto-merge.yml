@@ -1,4 +1,4 @@
-name: Dependabot Auto-Merge
+name: Dependabot Auto-merge
 
 on: pull_request
 
@@ -9,6 +9,7 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
+    # 仅针对 Dependabot 创建的 PR 运行
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Dependabot metadata
@@ -17,19 +18,8 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Approve a PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
       - name: Enable auto-merge for Dependabot PRs
-        # Auto-merge if:
-        # 1. GitHub Actions updates (all versions including major)
-        # 2. npm updates that are not major versions
-        if: |
-          steps.metadata.outputs.package-ecosystem == 'github_actions' ||
-          steps.metadata.outputs.update-type != 'version-update:semver-major'
+        # 所有更新都自动合并（包括 major 版本）
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
