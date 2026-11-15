@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-
 const nextConfig: NextConfig = {
-  output: isGitHubPages ? 'export' : undefined,
+  output: 'export',
   images: {
-    unoptimized: isGitHubPages,
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
@@ -30,18 +28,11 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    localPatterns: [
-      {
-        pathname: '/api/**',
-        search: '',
-      },
-    ],
   },
   // 优化字体加载
   experimental: {
     optimizePackageImports: ['next/font/google'],
   },
-  // output: "standalone", // Commented out due to Windows symlink issues
 };
 
 export default nextConfig;
