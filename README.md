@@ -1,5 +1,9 @@
 # XERAFUN
 
+- [xerafun - Pocket Universe](https://x2011.pages.dev/)
+- [xerafun - Pocket Universe](https://xerafun.github.io/x2011/)
+- [xerafun - Pocket Universe](https://xerafun.vercel.app/)
+
 ## Requirements
 
 - Node.js 22+
