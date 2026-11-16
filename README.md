@@ -1,8 +1,8 @@
 # XERAFUN
 
-- [xerafun - Pocket Universe](https://x2011.pages.dev/)
-- [xerafun - Pocket Universe](https://xerafun.github.io/x2011/)
-- [xerafun - Pocket Universe](https://xerafun.vercel.app/)
+- Cloudflare Pages: [https://x2011.pages.dev/](https://x2011.pages.dev/)
+- GitHub Pages: [https://xerafun.github.io/x2011/](https://xerafun.github.io/x2011/)
+- Vercel: [https://xerafun.vercel.app/](https://xerafun.vercel.app/)
 
 ## Requirements
 
