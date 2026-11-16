@@ -80,8 +80,8 @@
     <!-- 黑色 Logo -->
     <div class="logo-card">
       <svg viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-        <line x1="25" y1="25" x2="75" y2="75" stroke="black" stroke-width="15" />
-        <line x1="25" y1="75" x2="75" y2="25" stroke="black" stroke-width="15" />
+        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="black" stroke-width="14" stroke-linecap="square" />
+        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="black" stroke-width="14" stroke-linecap="square" />
       </svg>
       <span>黑色 Logo</span>
       <button id="btnBlack">🖤 下载</button>
@@ -90,8 +90,8 @@
     <!-- 白色 Logo -->
     <div class="logo-card">
       <svg viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-        <line x1="25" y1="25" x2="75" y2="75" stroke="white" stroke-width="15" />
-        <line x1="25" y1="75" x2="75" y2="25" stroke="white" stroke-width="15" />
+        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="white" stroke-width="14" stroke-linecap="square" />
+        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="white" stroke-width="14" stroke-linecap="square" />
       </svg>
       <span>白色 Logo</span>
       <button id="btnWhite">⚪ 下载</button>
@@ -104,8 +104,8 @@
         <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="#282828" stroke-width="21" stroke-linecap="square" />
         <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="#282828" stroke-width="21" stroke-linecap="square" />
         <!-- 上层内部色 -->
-        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="#CCCCCC" stroke-width="12" stroke-linecap="square" />
-        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="#CCCCCC" stroke-width="12" stroke-linecap="square" />
+        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="#CCCCCC" stroke-width="14" stroke-linecap="square" />
+        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="#CCCCCC" stroke-width="14" stroke-linecap="square" />
       </svg>
       <span>黑白双层</span>
       <button id="btnLayered" style="background: #333; border: 1px solid #555;">🐼 下载</button>
@@ -114,30 +114,14 @@
     <!-- 黑白交叉 Logo -->
     <div class="logo-card">
       <svg viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="black" stroke-width="15" stroke-linecap="square" />
+        <line x1="30.3" y1="30.3" x2="69.7" y2="69.7" stroke="black" stroke-width="14" stroke-linecap="square" />
         <!-- 上层白色 (带黑边) -->
-        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="black" stroke-width="15" stroke-linecap="square" />
-        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="white" stroke-width="12" stroke-linecap="square" />
+        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="black" stroke-width="18" stroke-linecap="square" />
+        <line x1="30.3" y1="69.7" x2="69.7" y2="30.3" stroke="white" stroke-width="14" stroke-linecap="square" />
       </svg>
       <span>黑白交叉</span>
       <button id="btnCrossing"
         style="background: linear-gradient(135deg, #000 50%, #fff 50%); border: 1px solid #555;">❌ 下载</button>
-    </div>
-
-    <!-- 黑红配色 Logo -->
-    <div class="logo-card">
-      <canvas id="redBlackPreview" width="120" height="120"
-        style="width: 120px; height: 120px; border-radius: 8px; border: 1px solid #555;"></canvas>
-      <span>黑红配色</span>
-      <button id="btnRedBlack"
-        style="background: linear-gradient(135deg, #101828 50%, #E7000B 50%); border: 1px solid #555;">♦️ 下载</button>
-    </div>
-
-    <!-- 蒸汽朋克风 Logo -->
-    <div class="logo-card">
-      <canvas id="vaporwavePreview" width="120" height="120" style="width: 120px; height: 120px;"></canvas>
-      <span>蒸汽朋克风</span>
-      <button id="btnVaporwave" style="background: linear-gradient(135deg, #FF00FF, #00FFFF);">🌴 下载</button>
     </div>
   </div>
 
@@ -148,53 +132,9 @@
     <button id="btnFaviconLayered" style="background: #333; border: 1px solid #555;">🐼 黑白 Favicon</button>
     <button id="btnFaviconCrossing"
       style="background: linear-gradient(135deg, #000 50%, #fff 50%); border: 1px solid #555;">❌ 交叉 Favicon</button>
-    <button id="btnFaviconRedBlack"
-      style="background: linear-gradient(135deg, #101828 50%, #E7000B 50%); border: 1px solid #555;">♦️ 黑红
-      Favicon</button>
-    <button id="btnFaviconVaporwave" style="background: linear-gradient(135deg, #FF00FF, #00FFFF);">🌴 蒸汽朋克
-      Favicon</button>
   </div>
 
   <script>
-    // 绘制蒸汽朋克风 Logo 到 Canvas
-    function drawVaporwave(canvas, size) {
-      const ctx = canvas.getContext('2d');
-      canvas.width = size;
-      canvas.height = size;
-
-      // 透明背景（不填充）
-      ctx.clearRect(0, 0, size, size);
-
-      // 创建渐变 (与 web-nuxt Vaporwave 风格一致)
-      const gradient = ctx.createLinearGradient(0, 0, size, size);
-      gradient.addColorStop(0.3, '#FF9900');   // 霓虹橙
-      gradient.addColorStop(0.5, '#FF00FF'); // 霓虹洋红
-      gradient.addColorStop(0.7, '#00FFFF');   // 霓虹青
-
-      ctx.strokeStyle = gradient;
-      ctx.lineWidth = size * 0.15;
-      ctx.lineCap = 'butt';
-
-      // 画 X
-      const margin = size * 0.25;
-      ctx.beginPath();
-      ctx.moveTo(margin, margin);
-      ctx.lineTo(size - margin, size - margin);
-      ctx.stroke();
-
-      ctx.beginPath();
-      ctx.moveTo(margin, size - margin);
-      ctx.lineTo(size - margin, margin);
-      ctx.stroke();
-    }
-
-    // 页面加载时渲染预览
-    const previewCanvas = document.getElementById('vaporwavePreview');
-    drawVaporwave(previewCanvas, 120);
-
-    const redBlackPreview = document.getElementById('redBlackPreview');
-    drawRedBlack(redBlackPreview, 120);
-
     // 导出简单 SVG Logo
     function exportSimplePNG({ color, background, filename }) {
       const size = 1024;
@@ -206,11 +146,11 @@
       // 透明背景
       ctx.clearRect(0, 0, size, size);
 
-      // 画 X
+      // 画 X (按 x-circle 线宽 14%、方头 square cap)
       ctx.strokeStyle = color;
-      ctx.lineWidth = size * 0.15;
-      ctx.lineCap = 'butt';
-      const margin = size * 0.25;
+      ctx.lineWidth = size * 0.14;
+      ctx.lineCap = 'square';
+      const margin = size * 0.303;
 
       ctx.beginPath();
       ctx.moveTo(margin, margin);
@@ -274,9 +214,9 @@
       ctx.lineTo(size - margin, margin);
       ctx.stroke();
 
-      // 2. 绘制上层内部色 (细)
+      // 2. 绘制上层内部色 (细, 按 x-circle 线宽 14%)
       ctx.strokeStyle = '#CCCCCC';
-      ctx.lineWidth = size * 0.12; // 12% width
+      ctx.lineWidth = size * 0.14; // 14% width
 
       ctx.beginPath();
       ctx.moveTo(margin, margin);
@@ -300,29 +240,28 @@
       a.click();
     });
 
-    // 绘制黑白交叉 Logo
+    // 绘制黑白交叉 Logo (按 x-circle 线宽 14% 更新)
     function drawCrossing(canvas, size) {
       const ctx = canvas.getContext('2d');
       canvas.width = size;
       canvas.height = size;
       ctx.clearRect(0, 0, size, size);
-      // Square Cap 校正 margin
       const margin = size * 0.303;
 
-      ctx.lineWidth = size * 0.15;
       ctx.lineCap = 'square';
 
       // 1. 底层黑色 (\)
       ctx.strokeStyle = 'black';
+      ctx.lineWidth = size * 0.14;
       ctx.beginPath();
       ctx.moveTo(margin, margin);
       ctx.lineTo(size - margin, size - margin);
       ctx.stroke();
 
-      // 2. 上层白色 (/) 带黑边
+      // 2. 上层白色 (/) 带黑边 (黑边 18%, 白色前景 14%)
       // 背景黑
       ctx.strokeStyle = 'black';
-      ctx.lineWidth = size * 0.15;
+      ctx.lineWidth = size * 0.18;
       ctx.beginPath();
       ctx.moveTo(margin, size - margin);
       ctx.lineTo(size - margin, margin);
@@ -330,7 +269,7 @@
 
       // 前景白
       ctx.strokeStyle = 'white';
-      ctx.lineWidth = size * 0.12;
+      ctx.lineWidth = size * 0.14;
       ctx.beginPath();
       ctx.moveTo(margin, size - margin);
       ctx.lineTo(size - margin, margin);
@@ -345,56 +284,6 @@
       const a = document.createElement('a');
       a.href = png;
       a.download = 'cross-crossing.png';
-      a.click();
-    });
-
-    // 蒸汽朋克风 Logo
-    document.getElementById('btnVaporwave').addEventListener('click', () => {
-      const canvas = document.createElement('canvas');
-      drawVaporwave(canvas, 1024);
-      const png = canvas.toDataURL('image/png');
-      const a = document.createElement('a');
-      a.href = png;
-      a.download = 'cross-vaporwave.png';
-      a.click();
-    });
-
-    // 绘制黑红交叉 Logo
-    function drawRedBlack(canvas, size) {
-      const ctx = canvas.getContext('2d');
-      canvas.width = size;
-      canvas.height = size;
-      ctx.clearRect(0, 0, size, size);
-      // Square Cap 校正 margin
-      const margin = size * 0.303;
-
-      ctx.lineWidth = size * 0.15;
-      // 1. 底层黑色 (\)
-      ctx.strokeStyle = '#101828';
-      ctx.lineWidth = size * 0.15;
-      ctx.lineCap = 'square';
-      ctx.beginPath();
-      ctx.moveTo(margin, margin);
-      ctx.lineTo(size - margin, size - margin);
-      ctx.stroke();
-
-      // 2. 上层红色 (/)
-      ctx.strokeStyle = '#E7000B';
-      ctx.lineWidth = size * 0.12;
-      ctx.beginPath();
-      ctx.moveTo(margin, size - margin);
-      ctx.lineTo(size - margin, margin);
-      ctx.stroke();
-    }
-
-    // 黑红 Logo 下载
-    document.getElementById('btnRedBlack').addEventListener('click', () => {
-      const canvas = document.createElement('canvas');
-      drawRedBlack(canvas, 1024);
-      const png = canvas.toDataURL('image/png');
-      const a = document.createElement('a');
-      a.href = png;
-      a.download = 'cross-redblack.png';
       a.click();
     });
 
@@ -481,14 +370,14 @@
       return buffer;
     }
 
-    // 简单 Favicon 绘制
+    // 简单 Favicon 绘制 (按 x-circle 线宽 14%)
     function drawSimpleFavicon(canvas, size, color) {
       const ctx = canvas.getContext('2d');
       ctx.clearRect(0, 0, size, size);
       ctx.strokeStyle = color;
-      ctx.lineWidth = size * 0.12;
-      ctx.lineCap = 'butt';
-      const margin = size * 0.25;
+      ctx.lineWidth = size * 0.14;
+      ctx.lineCap = 'square';
+      const margin = size * 0.303;
       ctx.beginPath();
       ctx.moveTo(margin, margin);
       ctx.lineTo(size - margin, size - margin);
@@ -517,16 +406,6 @@
     // 交叉 Favicon
     document.getElementById('btnFaviconCrossing').addEventListener('click', () => {
       exportFavicon(drawCrossing, 'favicon.ico');
-    });
-
-    // 蒸汽朋克 Favicon
-    document.getElementById('btnFaviconVaporwave').addEventListener('click', () => {
-      exportFavicon(drawVaporwave, 'favicon.ico');
-    });
-
-    // 黑红 Favicon
-    document.getElementById('btnFaviconRedBlack').addEventListener('click', () => {
-      exportFavicon(drawRedBlack, 'favicon.ico');
     });
   </script>
 
